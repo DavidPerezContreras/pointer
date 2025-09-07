@@ -1,18 +1,34 @@
-# 📐  C Hello World
+# 📌 C Pointer Basics — Demo Program
 
-A C hello world that causes a buffer overflow to test the runtime checks
+This simple C program demonstrates the fundamentals of **pointers** in C, including dynamic memory allocation, dereferencing, and pointer reassignment. It's designed as a hands-on introduction for beginners exploring how pointers interact with memory.
 
 ---
 
-### 🔧 Debugging with VS Code
+## 🧠 What This Program Shows
 
-The `launch.json` file assumes your executable is named `hello_world.exe`.  
-If you change the project name in `CMakeLists.txt`, make sure to update the `"program"` path in `launch.json`:
-
-```cmake
-project(example_project)
+- **Declaring a pointer**: creates a pointer to an integer.
+```c
+int *z;
 ```
 
-```json
-"program": "${workspaceFolder}/build/Debug/example_project.exe"
+- **Allocating memory**: reserves space for one integer on the heap.
+```c
+malloc(sizeof(int))
 ```
+
+- **Dereferencing**: stores a value in the memory pointed to by `z`.
+```c
+*z = x;
+```
+
+- **Pointer reassignment**: makes the pointer refer to a different variable.
+```c
+z = &x;
+```
+
+- **Reading through a pointer**: accesses the value stored at the pointer’s address.
+```c
+*z
+```
+
+---
